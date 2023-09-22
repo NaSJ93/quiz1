@@ -37,4 +37,5 @@
 	
 		<mybatis-spring:scan base-package="edu.mit.dao" />	<!-- 마이 바티스 -->
 		<context:component-scan base-package="edu.mit.logic" />	<!-- 의존성 주입 -->
+		<context:component-scan base-package="edu.mit.service" />
 </beans>

@@ -6,12 +6,16 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import edu.mit.dao.TwoVO;
-import edu.mit.logic.MyLogic3;
+import edu.mit.service.QuizService;
+import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
 
 @Log4j
 @Controller
+@AllArgsConstructor
 public class QuizController {
+	
+	private QuizService service;
 	
 	@GetMapping("/quiz/quiz1")
 	public void quiz(Model model) {
@@ -28,9 +32,7 @@ public class QuizController {
 		log.info("post 요청");
 		log.info(vo);
 		
-		MyLogic3 logic=new MyLogic3();
-		
-		model.addAttribute("sum", logic.addup(vo.getNum1(), vo.getNum2()));
+		model.addAttribute("sum", service.allsum(vo));
 		return "/quiz/result";
 	}
 	
