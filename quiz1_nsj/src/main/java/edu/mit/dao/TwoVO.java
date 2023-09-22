@@ -1,4 +1,4 @@
-package edu.mit.vo;
+package edu.mit.dao;
 
 import lombok.Data;
 
