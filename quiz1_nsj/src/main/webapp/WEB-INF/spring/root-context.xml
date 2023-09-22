@@ -35,6 +35,6 @@
 								<!-- 위에 (bean id="dataSource") 이 객체를 참조함  -->		
 	</bean>
 	
-		<mybatis-spring:scan base-package="edu.mit.dao" />
-		<context:component-scan base-package="edu.mit.logic" />
+		<mybatis-spring:scan base-package="edu.mit.dao" />	<!-- 마이 바티스 -->
+		<context:component-scan base-package="edu.mit.logic" />	<!-- 의존성 주입 -->
 </beans>
