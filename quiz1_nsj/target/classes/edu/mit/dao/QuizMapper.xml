@@ -8,6 +8,10 @@
 	<select id="now" resultType="date">
 	select now()
 	</select>
+	
+	<insert id="save">
+	insert into townum(num1,num2) values(#{num1},#{num2})
+	</insert>
 
 
 </mapper>
